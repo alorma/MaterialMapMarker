@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaterialMapMarker" parent="MaterialTextView">
+        <attr name="shapeAppearance" format="reference" />
+        <attr name="shapeAppearanceOverlay" format="reference" />
+    </declare-styleable>
+
+    <attr name="materialMapMarkerStyle" />
+
+</resources>
