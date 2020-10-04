@@ -4,6 +4,11 @@
     <declare-styleable name="MaterialMapMarker" parent="MaterialTextView">
         <attr name="shapeAppearance" format="reference" />
         <attr name="shapeAppearanceOverlay" format="reference" />
+
+        <attr name="pointSize" format="dimension" />
+        <attr name="rippleColor" format="color" />
+        <attr name="fillColor" format="color" />
+        <attr name="strokeColor" format="color" />
     </declare-styleable>
 
     <attr name="materialMapMarkerStyle" />
