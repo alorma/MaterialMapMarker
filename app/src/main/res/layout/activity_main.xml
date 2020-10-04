@@ -5,9 +5,18 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:clipToPadding="false"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:gravity="center">
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/enableSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:checked="true"
+        android:padding="24dp"
+        android:text="Enabled" />
 
     <com.alorma.materialmarker.MaterialMapMarker
         android:id="@+id/marker0"
@@ -23,9 +32,9 @@
 
     <com.alorma.materialmarker.MaterialMapMarker
         android:id="@+id/marker1"
+        style="@style/Widget.Demo.MaterialMarker.Primary"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        style="@style/Widget.Demo.MaterialMarker.Primary"
         android:elevation="4dp"
         android:gravity="center"
         android:text="Hello World!" />
@@ -41,7 +50,40 @@
         android:layout_height="80dp"
         android:elevation="4dp"
         android:gravity="center"
+        android:text="Hello World!" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="Fotocasa Style" />
+
+    <com.alorma.materialmarker.MaterialMapMarker
+        android:id="@+id/markerFotocasa0"
+        style="@style/Widget.Demo.MaterialMarker.Fotocasa"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:elevation="4dp"
+        android:gravity="center"
         android:text="Hello World!"
-        />
+        android:checked="true"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="24dp" />
+
+    <com.alorma.materialmarker.MaterialMapMarker
+        android:id="@+id/markerFotocasa1"
+        style="@style/Widget.Demo.MaterialMarker.Fotocasa"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:checked="false"/>
 
 </LinearLayout>

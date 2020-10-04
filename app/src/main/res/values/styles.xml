@@ -15,18 +15,23 @@
     </style>
 
     <style name="Widget.Demo.MaterialMarker.Primary" parent="Widget.Demo.MaterialMarker">
-        <item name="shapeAppearance">@style/ShapeAppearance.Demo.MapMarker</item>
         <item name="rippleColor">?colorOnPrimary</item>
         <item name="fillColor">?colorPrimary</item>
         <item name="strokeColor">?colorOnPrimary</item>
     </style>
 
     <style name="Widget.Demo.MaterialMarker.Secondary" parent="Widget.Demo.MaterialMarker">
-        <item name="shapeAppearance">@style/ShapeAppearance.Demo.MapMarker</item>
         <item name="pointSize">16dp</item>
         <item name="rippleColor">?colorOnSecondary</item>
-        <item name="fillColor">?colorSecondary</item>
-        <item name="strokeColor">?colorError</item>
+        <item name="fillColor">@color/color_marker_fill_secondary_selector</item>
+        <item name="strokeColor">@color/color_marker_stroke_secondary_selector</item>
+    </style>
+
+    <style name="Widget.Demo.MaterialMarker.Fotocasa" parent="Widget.Demo.MaterialMarker">
+        <item name="pointSize">8dp</item>
+        <item name="rippleColor">@color/color_marker_ripple_fotocasa_selector</item>
+        <item name="fillColor">@color/color_marker_fill_fotocasa_selector</item>
+        <item name="strokeColor">@color/color_marker_stroke_fotocasa_selector</item>
     </style>
 
     <style name="ShapeAppearance.Demo.MapMarker" parent="ShapeAppearance.MaterialComponents.SmallComponent">

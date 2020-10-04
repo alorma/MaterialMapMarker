@@ -12,5 +12,16 @@ class MainActivity : AppCompatActivity() {
         marker0.setOnClickListener { }
         marker1.setOnClickListener { }
         marker2.setOnClickListener { }
+        markerFotocasa0.setOnClickListener { }
+        markerFotocasa1.setOnClickListener { }
+
+        enableSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            marker0.isEnabled = isChecked
+            marker1.isEnabled = isChecked
+            marker2.isEnabled = isChecked
+
+            markerFotocasa0.isChecked = !markerFotocasa0.isChecked
+            markerFotocasa1.isChecked = !markerFotocasa1.isChecked
+        }
     }
 }

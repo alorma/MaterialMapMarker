@@ -9,7 +9,7 @@ import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
-import androidx.appcompat.widget.AppCompatTextView
+import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.ViewCompat
 import com.google.android.material.color.MaterialColors
@@ -23,7 +23,7 @@ class MaterialMapMarker @JvmOverloads constructor(
     attributeSet: AttributeSet? = null,
     @AttrRes defStyleAttr: Int = R.attr.materialMapMarkerStyle,
     @StyleRes defStyleRes: Int = R.style.Widget_Demo_MaterialMarker
-) : AppCompatTextView(context, attributeSet, defStyleAttr) {
+) : AppCompatCheckedTextView(context, attributeSet, defStyleAttr) {
 
     private var strokeWidth: Float = 2f
 
@@ -56,7 +56,6 @@ class MaterialMapMarker @JvmOverloads constructor(
 
     private fun TypedArray.readAttributes() {
         pointSize = getDimensionPixelOffset(R.styleable.MaterialMapMarker_pointSize, pointSize)
-
 
         rippleColor = getColorStateList(
             R.styleable.MaterialMapMarker_rippleColor
