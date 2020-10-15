@@ -12,6 +12,7 @@ import androidx.annotation.StyleRes
 import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.ViewCompat
+import androidx.core.view.updatePadding
 import com.google.android.material.color.MaterialColors
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.MaterialShapeUtils
@@ -43,6 +44,14 @@ class MaterialMapMarker @JvmOverloads constructor(
 
     init {
         setTextColor(strokeColor)
+
+        updatePadding(
+            left = paddingLeft.coerceAtLeast(8.dp),
+            top = paddingLeft.coerceAtLeast(8.dp),
+            right = paddingLeft.coerceAtLeast(8.dp),
+            bottom = paddingLeft.coerceAtLeast(8.dp),
+        )
+
         context.withStyledAttributes(
             attributeSet,
             R.styleable.MaterialMapMarker,
@@ -96,6 +105,12 @@ class MaterialMapMarker @JvmOverloads constructor(
         materialDrawable.strokeWidth = strokeWidth
         materialDrawable.strokeColor = strokeColor
 
+        materialDrawable.setPadding(
+            paddingLeft,
+            paddingTop,
+            paddingRight,
+            paddingBottom
+        )
 
         val maskDrawable = MaterialShapeDrawable(shapeAppearanceModel)
 
