@@ -47,9 +47,9 @@ class MaterialMapMarker @JvmOverloads constructor(
 
         updatePadding(
             left = paddingLeft.coerceAtLeast(8.dp),
-            top = paddingLeft.coerceAtLeast(8.dp),
-            right = paddingLeft.coerceAtLeast(8.dp),
-            bottom = paddingLeft.coerceAtLeast(8.dp),
+            top = paddingTop.coerceAtLeast(8.dp),
+            right = paddingRight.coerceAtLeast(8.dp),
+            bottom = paddingBottom.coerceAtLeast(8.dp),
         )
 
         context.withStyledAttributes(
