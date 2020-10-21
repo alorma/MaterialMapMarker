@@ -1,5 +1,4 @@
-name: Lint PR
-
+name: "Lint PR"
 on:
   pull_request_target:
     types:
@@ -9,9 +8,12 @@ on:
 
 jobs:
   main:
-    name: Pr contains Prefix
     runs-on: ubuntu-latest
     steps:
       - uses: amannn/action-semantic-pull-request@v1.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Optionally you can configure which types are allowed.
+        # Default: https://github.com/commitizen/conventional-commit-types
+        with:
+          types: Feature, Tech, Fix
